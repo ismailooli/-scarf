@@ -1,3 +1,3 @@
 # py-scarf
 
-eventually creating a chrome extension that tells you what to wear depending on the weather at your location
+ creating a chrome extension that tells you what to wear depending on the weather at your location
