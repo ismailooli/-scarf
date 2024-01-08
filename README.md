@@ -3,7 +3,7 @@
  creating a chrome extension that tells you what to wear depending on the weather at your location
 
 
-currently: have a working chrome extension that runs on HTML/CSS/JavaScript
+currently: working on adding image embeds that lead to amazon links 
 
 next steps:
-- web scraping clothing websites to provide the user with an example of the clothing they can buy/wear 
+- unknown for now
