@@ -46,6 +46,33 @@ function getRecommendationByTemperature(temperature) {
   return "Temperature range not covered by recommendations";
 }
 
+function getClothingEmbed(temperature){
+
+    // Update clothing recommendation in the "clothing-info" div
+
+
+// Update product image and link based on the temperature range
+    const productImageElement = document.getElementById('product-image');
+    const amazonLinkElement = document.getElementById('amazon-link');
+
+    const temperatureRanges = [
+        { min: -100, max: 24, linker:"Wear a winter jacket and gloves because it's freezing", image: 'cloud1.png'},
+        { min: 25, max: 44, linker: "http://tiny.cc/dc9yvz", image: 'hoodie1.png'},
+        { min: 45, max: 64, linker: "A fleece sweater or a light hoodie should be fine" },
+        { min: 65, max: 79, linker: "The weather is really nice, so wear some short sleeves" },
+        { min: 80, max: 140, linker: "It's really hot outside, so wear some shorts" },
+    ];
+
+    for (const range of temperatureRanges) {
+        if (temperature >= range.min && temperature <= range.max) {
+            productImageElement.src = range.image;
+            amazonLinkElement.href = range.linker;
+    }
+}
+  
+    return "Temperature range not covered by recommendations";
+}
+
 function fetchWeatherData(location) {
     // Construct the API url with the location and api key
     const apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${location}&appid=${apiKey}&units=imperial`;
@@ -83,6 +110,7 @@ function fetchWeatherData(location) {
          const clothingInfoElement = document.getElementById('clothing-recommendation');
          clothingInfoElement.textContent = clothingRecommendation;
      
+         getClothingEmbed(temperature);
        
     }).catch(error => {
         alert(`Error fetching weather data: ${error} (Api Error)`);
