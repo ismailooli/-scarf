@@ -56,11 +56,11 @@ function getClothingEmbed(temperature){
     const amazonLinkElement = document.getElementById('amazon-link');
 
     const temperatureRanges = [
-        { min: -100, max: 24, linker:"Wear a winter jacket and gloves because it's freezing", image: 'cloud1.png'},
-        { min: 25, max: 44, linker: "http://tiny.cc/dc9yvz", image: 'hoodie1.png'},
-        { min: 45, max: 64, linker: "A fleece sweater or a light hoodie should be fine" },
-        { min: 65, max: 79, linker: "The weather is really nice, so wear some short sleeves" },
-        { min: 80, max: 140, linker: "It's really hot outside, so wear some shorts" },
+        { min: -100, max: 24, linker:"https://shorturl.at/cvEPY", image: 'assets/coat1.jpg'},
+        { min: 25, max: 44, linker: "https://shorturl.at/wxyKU", image: 'assets/coat2.png'},
+        { min: 45, max: 64,  linker: "http://tiny.cc/dc9yvz", image: 'assets/hoodie1.png' },
+        { min: 65, max: 79, linker: "https://shorturl.at/ijQT3", image: 'assets/tshirt1.png' },
+        { min: 80, max: 140, linker: "https://shorturl.at/dtMTU", image: 'assets/shorts1.png' },
     ];
 
     for (const range of temperatureRanges) {
